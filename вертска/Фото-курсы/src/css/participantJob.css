@@ -1,0 +1,221 @@
+.participant {
+  display: grid;
+  grid-template-columns: 48.8% 23.5% 23.5%;
+  grid-template-rows: 1fr 12% 1fr;
+  height: 630px;
+  margin: 0 0 69px 0;
+  gap: 30px;
+  color: #FFFFFF;
+  grid-template-areas: "a b b" "a b b" "a c d";
+}
+@media (max-width: 1024px) {
+  .participant {
+    height: 620px;
+    grid-template-columns: 48.8% 22.5% 22.5%;
+    grid-template-rows: 50% 6% 35%;
+  }
+}
+@media (max-width: 768px) {
+  .participant {
+    margin: 0 0 63px 0;
+    height: auto;
+    grid-template-columns: 47.8% 21.8% 21.8%;
+    grid-template-rows: 42% 15% 29%;
+  }
+}
+@media (max-width: 635px) {
+  .participant {
+    margin: 0 0 50px 0;
+    height: auto;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: minmax(422px, auto) minmax(245px, auto) 1fr;
+    grid-template-areas: "a a " "b b" "c d";
+  }
+}
+
+.participant__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 11px 15px 66px 61px;
+  background-image: url(./images/Rectangle2.webp);
+  background-repeat: no-repeat;
+  grid-area: a;
+}
+@media (max-width: 1024px) {
+  .participant__content {
+    padding: 11px 19px 27px 30px;
+    background-image: url(./images/Rectangle22.webp);
+  }
+}
+@media (max-width: 768px) {
+  .participant__content {
+    padding: 11px 19px 27px 30px;
+    background-image: url(./images/Rectangle222.webp);
+  }
+}
+@media (max-width: 635px) {
+  .participant__content {
+    padding: 4px 6px 31px 30px;
+    background-size: cover;
+  }
+}
+.participant__content-hashtag {
+  padding: 9px 14px;
+  margin: 0 0 auto auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #202020;
+}
+@media (max-width: 635px) {
+  .participant__content-hashtag {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+.participant__content-masterName {
+  margin: 0 0 3px 0;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 18.75px;
+}
+@media (max-width: 1024px) {
+  .participant__content-masterName {
+    margin: 0 0 6px 0;
+  }
+}
+@media (max-width: 768px) {
+  .participant__content-masterName {
+    margin: 0 0 11px 0;
+  }
+}
+@media (max-width: 635px) {
+  .participant__content-masterName {
+    font-size: 14px;
+  }
+}
+.participant__content-date {
+  margin: 0 0 16px 0;
+  letter-spacing: 2px;
+  font-size: 36px;
+  font-family: "TTFirsNeueMedium";
+  line-height: 37.44px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .participant__content-date {
+    margin: 0 0 17px 0;
+    font-size: 34px;
+  }
+}
+@media (max-width: 768px) {
+  .participant__content-date {
+    line-height: 33.44px;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 635px) {
+  .participant__content-date {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    line-height: 26.4px;
+    width: 94%;
+  }
+}
+.participant__content-href {
+  padding: 14px 23px;
+  position: relative;
+  border: none;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #FF6E30;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+@media (max-width: 635px) {
+  .participant__content-href {
+    font-size: 14px;
+    padding: 14px 22px;
+  }
+}
+.participant__content-href:hover {
+  background-color: #BC572B;
+}
+.participant__content-href:active {
+  background-color: #CE4307;
+}
+.participant__content-href::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border: 3px solid #CE4307;
+}
+.participant__content-href::after:focus::after {
+  opacity: 1;
+}
+.participant__content-href:focus::after {
+  opacity: 1;
+}
+
+.b {
+  grid-area: b;
+}
+.b_h2 {
+  color: #202020;
+  margin: 0 0 18px 0;
+  font-family: "TTFirsNeueBold";
+  letter-spacing: 1.2px;
+}
+@media (max-width: 1024px) {
+  .b_h2 {
+    margin: 0 0 27px 0;
+  }
+}
+@media (max-width: 768px) {
+  .b_h2 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+  }
+}
+@media (max-width: 635px) {
+  .b_h2 {
+    letter-spacing: 0.9px;
+    font-size: 18px;
+  }
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.participant__img {
+  height: 258px;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+@media (max-width: 1024px) {
+  .participant__img {
+    height: 218px;
+  }
+}
+@media (max-width: 768px) {
+  .participant__img {
+    height: auto;
+  }
+}
+@media (max-width: 635px) {
+  .participant__img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=participantJob.css.map */

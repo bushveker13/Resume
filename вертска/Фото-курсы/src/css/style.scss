@@ -1,0 +1,132 @@
+@import'__variables.scss';
+@import'_mixin.scss';
+@font-face{
+    font-family: 'Roboto';
+    src:local("RobotoRegular"),local("Roboto-Regular"),
+    url('./fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src:local("RobotoBold"),local("Roboto-Bold"),
+    url('./fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'TTFirsNeueRegular';
+    src:local("TTFirsNeueRegular"),local("TTFirsNeue-Regular"),
+    url('./fonts/TTFirsNeue-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'TTFirsNeueMedium';
+    src:local("TTFirsNeueMedium"),local("TTFirsNeue-Medium"),
+    url('./fonts/TTFirsNeue-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'TTFirsNeueBold';
+    src:local("TTFirsNeueBold"),local("TTFirsNeue-Bold"),
+    url('./fonts/TTFirsNeue-Medium.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container{
+    margin: 0 auto 0 auto;
+    max-width: 1350px;
+    padding: 0 30px 0px 30px;
+
+    @media(max-width:$breakpoint_md){
+        padding: 0 27px 0 27px;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        padding: 0 21px 0 21px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+ul {
+    list-style: none;
+}
+
+h1{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+  
+.class-reset {
+    padding: 0;
+    margin: 0;
+}
+
+button, input {
+    font: inherit;
+    background-color: inherit;
+}
+
+body,
+html{
+    font-family: "Roboto",  Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    min-width: 320px;
+    line-height: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+main{
+    margin: 0 0 71px 0;
+
+    @media(max-width:$breakpoint_xl){
+        margin: 0 0 69px 0;
+    }
+
+    
+    @media(max-width:$breakpoint_md){
+        margin: 0 0 70px 0;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        margin: 0 0 50px 0;
+    }
+}
+@import'header.scss';
+@import'about-us.scss';
+@import'participantJob.scss';
+@import'our-projects.scss';
+@import'contact.scss';
+@import'footer.scss';

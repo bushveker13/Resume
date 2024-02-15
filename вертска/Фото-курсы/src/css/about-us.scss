@@ -1,0 +1,208 @@
+@import'__variables.scss';
+@import'_mixin.scss';
+.about-us{
+    margin: 0 0 71px 0;
+    background-color: #202020;
+
+    &__general{
+        display: grid;
+        grid-template-columns:48% 49%;
+        grid-template-rows: 50% 50%;
+        column-gap: 42px;
+        padding-top: 33px;
+        padding-bottom: 43px;
+        grid-template-areas:
+        "leftblok rightblok"
+        "leftblok rightblok";
+
+       
+        @media(max-width:$breakpoint_xl){
+            margin: 0px 0 74px 0;
+            padding-bottom: 61px;
+            column-gap: 36px;
+        }
+    
+        @media(max-width:$breakpoint_md){
+            margin: 0px 0 68px 0;
+            padding-bottom: 64px;
+            grid-template-columns: 47.5% 47%;
+        }
+    
+        @media(max-width:$breakpoint_sm){
+            margin: 0 0 0 0;
+            padding-bottom: 52px;
+            grid-template-areas:
+            "leftblok"
+            "rightblok";
+            grid-template-rows: minmax(110px, auto) minmax(470px, auto);
+            grid-template-columns: 1fr;
+        }
+
+       
+    }
+
+    &__left-blok{
+        grid-area: leftblok;
+    }
+
+    &__title{
+        margin: 0 0 6px 0;
+        color: #CACACA;
+        font-family: "TTFirsNeueBold";
+        @include general_title;
+
+        @media(max-width:$breakpoint_md){
+            margin: 0 0 9px;
+        }
+
+        @media(max-width:$breakpoint_sm){
+            font-size: 18px;
+        }
+       
+    }
+
+    &__text-content{
+        margin: 0 0 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: #CACACA;
+        line-height: 28px;
+
+        @media(max-width:$breakpoint_sm){
+            width: 101%;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+
+    &__right-blok{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+        padding-bottom: 27px;
+        grid-area: rightblok;
+        background-image: url(./images/Rectangle17.webp);
+        background-repeat: no-repeat;
+        background-position-y: 29px;
+
+        @media(max-width:$breakpoint_xl){
+            padding-bottom: 20px;
+            background-image: url(./images/Rectangle177.webp);
+        }
+
+        @media(max-width:$breakpoint_md){
+            padding-bottom: 5px;
+            background-image: url(./images/Rectangle1777.webp);
+        }
+
+         @media(max-width:$breakpoint_sm){
+            padding-bottom: 8px;
+            background-image: url(./images/Rectangle177.webp);
+            background-size: 100% 60%;
+            background-position-y: 19px; 
+        }
+    }
+
+    &__form{
+        display: flex;
+        max-width: 632px;
+        width: 100%;
+        position: relative;
+        &-title{
+            display: block;
+            padding: 0 0 12px 0;
+            font-family:'TTFirsNeueRegular';
+            font-size: 24px;
+            color: $colorWhiteText;
+
+             @media(max-width:$breakpoint_sm){
+                margin: 0 0 16px 0;
+                padding: 0 0 0 0;
+                font-size: 18px;
+            }
+        }
+
+        &-input{
+            padding: 14px 0 14px 20px;
+            width: 75.5%;
+            margin: 0 32px 0 0;
+            background-color: #4A4A4A;
+            border: 1px solid #4a4a4a;
+            outline: none;
+            color: $colorWhiteText;
+            @media(max-width:$breakpoint_xl){
+                margin: 0 32px 22px 0;
+                width: 72.5%;
+            }
+
+            @media(max-width:$breakpoint_md){
+                margin: 0 0px 22px 0;
+                width: 100%;
+            }
+
+            @media(max-width:$breakpoint_sm){
+                margin: 0 0 18px 0;
+                padding: 8px 0;
+            }
+
+            &:focus{
+                border: 1px solid #FF6E30;
+            }
+        }
+
+        &-input::placeholder{
+            color: #CACACA;
+            transition: color .3s;
+        }
+
+        &-input:hover::placeholder{
+            color: #FF6E30;
+        }
+
+        &-input:focus{
+            border: 1px solid #FF6E30;
+        }
+
+
+        &-button{
+            padding: 16px 19px;
+            @include orange__batton;
+            font-family: "TTFirsNeueRegular";
+            &:hover{
+                background-color: #BC572B
+            }
+
+            @media(max-width:$breakpoint_sm){
+                padding: 14px 17px;
+            }
+            
+        }
+
+        &-button::after{
+            @include focus_element;
+            opacity: 0;
+            border: 3px solid #CE4307;
+            &:focus::after{
+                opacity: 1;
+            }
+        }
+
+        &-button:focus::after{
+            opacity: 1;
+        }
+
+        @media(max-width:$breakpoint_xl){
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+    }
+
+    
+
+    @media(max-width:$breakpoint_sm){
+        margin: 0 0 53px 0;
+    }
+
+}

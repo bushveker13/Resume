@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container{
+    margin: 0 auto 0 auto;
+    max-width: 1640px;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+ul {
+    list-style: none;
+}
+  
+.class-reset {
+    padding: 0;
+    margin: 0;
+}
+
+button, input {
+    font: inherit;
+}
+
+body,
+html{
+    font-family: "Open-Sans",  Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    min-width: 320px;
+    line-height: 1;
+}
+
+
+@media(max-width:1041px){
+    
+    .container{
+        padding: 0 50px;
+    }
+}
+
+@media(max-width:550px){
+
+    .container{
+        padding: 0 15px;
+    }
+}

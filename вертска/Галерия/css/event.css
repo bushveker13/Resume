@@ -1,0 +1,321 @@
+.event{
+    padding: 0 0 77px 0;
+}
+
+.event__title{
+    font-size: 48px;
+    font-weight: 400;
+    margin:0 0 27px 0;
+    padding: 0;
+}
+
+.event-list{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 0 0 44px 0;
+    padding: 0;
+}
+
+.event__item{
+    width: 31%;
+    min-height: 700px;
+    border: 1px solid #cacaca;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    margin: 0 3.4% 0 0;
+    padding: 297px 0 29px 0;
+    background-size: 100% 42%;
+}
+
+.event__item:nth-child(n + 4){
+    margin-top: 50px;
+}
+
+.event__item:nth-child(3n){
+    margin-right: 0;
+}
+
+.event__item-imgback-1{
+    background-image: url(../img/flower-event.jpg);
+}
+
+.event__item-imgback-2{
+    background-image: url(../img/glass-event.png);
+}
+
+.event__item-imgback-3{
+    background-image: url(../img/hallway-event.jpg);
+}
+
+.event__item-imgback-4{
+    background-image: url(../img/pazale-event.jpg);
+}
+
+.event__item-imgback-5{
+    background-image: url(../img/1-event.png);
+}
+
+.event__item-mane-museum{
+    color:  #999999;
+    font-size: 12px;
+    font-weight: 600;
+    align-self: flex-end;
+    padding: 19px 19px 0 0;
+    margin: 0 0 4px 0;
+    text-align: right;
+    max-width: 165px;
+}    
+
+.event__item-title{
+    font-weight: 600;
+    font-size: 24px;
+    padding: 0;
+    line-height: 32px;
+    margin: 0 0 2px 0;
+}
+
+.event__item-text{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    width: 91%;
+    margin:0px 0 auto 0;
+}
+
+.event__li-link{
+    font-size: 16px;
+    color: #9D5CD0;
+    padding: 20px 0 10px 0;
+    outline: none;
+    position: relative;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+.event__li-link:focus{
+    background-color: #9D5CD0;
+    color: white;
+}
+
+.event__li-link:hover{
+    color: #7943A4;
+}
+
+.event__li-link::before{
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #9D5CD0;
+    width: 100%;
+    bottom: 4px;
+}
+
+.event__li-link:focus:before{
+    border-color: white;
+}
+
+.event__li-link:focus{
+    background-color: #9D5CD0;
+    color: white;
+    border-bottom:1px solid white;
+}
+
+
+.event__item-generals-content{
+    min-height: 370px;
+    padding:0 0 11px 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.event__button{
+    display: block;
+    color: #9D5CD0;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #9D5CD0;
+    border-radius: 100px;
+    background-color: inherit;
+    width: 188px;
+    padding: 20px 0 20px 0;
+    margin-right: auto;
+    margin-left: auto;
+    transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+    outline: none;
+    cursor: pointer;
+}
+
+.event__button:hover{
+    background-color: #9D5CD0;
+    color: white;
+    border-color:#D1A9F0; 
+}
+
+.event__button:focus{
+    background-color: #9D5CD0;
+    color: white;
+    border-color:#D1A9F0; 
+}
+
+.event__button:active{
+    background-color: #7943A4;
+    border-color: #D1A9F0;
+    color: white;
+}
+
+.event__item:nth-child(n +4){
+    display: none;
+}
+
+.is-active-event > .event__item:nth-child(n +4){
+    display: block;
+    height: auto;
+}
+
+.event__button-none{
+    display: none;
+}
+
+
+@media(max-width:1129px){
+
+    .event {
+        padding: 0 0 81px 0;
+    }
+
+    .event__item{
+        background-position-y: -104px;
+        min-height: 600px;
+        padding: 186px 0 0 0;
+    }
+
+    .event__item-generals-content{
+        padding: 0 0 48px 33px;
+        min-height: 491px;
+    }
+
+    .event__item-mane-museum{
+        margin: 0 0 14px 0;
+    }
+
+    .event__item-title{
+        margin: 0 0 5px 0;
+    }
+
+    .event__item-text{
+        width: 87%;
+    }
+}
+
+@media(max-width:1000px){
+
+    .event__item{
+        width: 46%;
+        margin: 0 4.5vw 0 0;
+    }
+
+
+    .event__item:nth-child(n +3) {
+        display: none;
+    }
+
+    .event__item:nth-child(2n){
+        margin: 0 0 0 0;
+    }
+
+    .event__item:nth-child(3n){
+        margin: 0 4.5vw 0 0;
+    }
+
+    .event__item:nth-child(n + 3){
+        margin-top: 35px;
+    }
+
+    .is-active-event > .event__item:nth-child(n + 3) {
+        display: block;
+        height: auto;
+    }
+
+}
+
+@media(max-width:790px){
+
+    .event__item-generals-content{
+        padding: 0 5px 48px 33px;
+    }
+    
+    .event__item {
+        width: 47%;
+        height: auto;
+        background-size: 100% 39%;
+    }
+}
+
+@media(max-width:600px){
+
+    .event {
+        padding: 0 0 44px 0;
+    }
+
+    .event__title{
+        font-size: 28px;
+        margin: 0 0 17px 0;
+    }
+
+    .swiper{
+        max-height: 719px;
+    }
+
+    .event-list{
+        flex-wrap: nowrap;
+        overflow: initial;
+    }
+
+    .event__item{
+        height: inherit;
+        max-height: 681px;
+        background-size: 100% 45%;
+    }
+
+    .event__item:nth-child(n +2) {
+        display: block;
+        margin-top: 0;
+    }
+
+    .event__item-title {
+        margin: 0 0 37px 0;
+    }
+
+    .event__item-generals-content {
+        padding: 0px 5px 48px 29px;
+    }
+
+    .event__item-mane-museum{
+        margin: 0px 0 7px 0;
+        padding: 31px 5px 0 0;
+    }
+
+    .event__item-text {
+        width: 88%;
+    }
+
+    .event__button{
+        display: none;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap,7px);
+    }
+
+    .swiper-pagination-bullet{
+        width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
+        height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,11px));
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #666666;
+    }
+}

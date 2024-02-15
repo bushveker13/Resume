@@ -1,0 +1,356 @@
+.contacts__title{
+    padding-bottom: 26px;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+    padding-left: max(151px, calc((103% - 1703px) / 2 + 6px) );
+}
+
+.contacts__generals-container{
+    display: flex;
+    width: 100%;
+}
+
+.contacts__container-generals-form{
+    min-height: 701px;
+    width: 50%;
+    min-width: 35.5%;
+    border-right: 1px solid #CACACA;
+    border-top: 1px solid #CACACA;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 124px;
+    padding-left: max(151px, calc((103% - 1703px) / 2 + 16px) );
+}
+
+.contacts__address{
+    width: 42%;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 32px 0;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.contacts__name-shoumrrom{
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 4px;
+}
+
+.contacts__form{
+    display: flex;
+    flex-direction: column;
+    width: 76%;
+    position: relative;
+    margin: 0 21px 43px 0;
+}
+
+.contacts__form-title{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 37px;
+    margin: 0 0px 20px 0;
+    padding: 0;
+    width: 77%;
+    display: inline-block;
+}
+
+.contacts__form-title:last-child(1){
+    margin-bottom: 44px;
+}
+
+.contacts__input{
+    border-radius: 100px;
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 22px;
+    outline: none;
+    border: 1px solid #333333;
+    overflow: hidden;
+    transition: background-color .2s ease;
+}
+
+.contacts__input:focus{
+    background-color: #EAEAEA;
+}
+
+.contacts__input:hover{
+    background-color: #EAEAEA;
+}
+
+input.contacts__input::placeholder{
+    line-height: 32px;
+    color: #999999;
+}
+
+.input__errr-1,
+.input__errr-2{
+    display: none;
+}
+
+.js-validate-error-label{
+    display: none;
+}
+
+.js-validate-error-label ~ .input__errr-1{
+    display: block;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    left: 19px;
+    top: -16px;
+}
+
+.js-validate-error-label ~ .input__errr-2{
+    display: block;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: 123px;
+    left: 19px;
+}
+
+.contacts__form-title-messenger{
+    font-size: 24px;
+    font-weight: 400;
+    margin:0 0 18px 0;
+    white-space: nowrap;
+}
+
+.contacts__form-button{
+    width: 154px;
+    height: 59px;
+    border: 2px solid #9D5CD0;
+    border-radius: 100px;
+    color: #9D5CD0;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    outline: none;
+    background-color: #FFFFFF;
+    transition: border-color .2s ease, color .2s ease, background-color .2s ease ;
+    cursor: pointer;
+
+}
+
+.contacts__form-button::after{
+    content: "";
+    width: 164px;
+    height: 67px;
+    position: absolute;
+    border: 2px solid #9D5CD0;
+    border-radius: 100px;
+    top: -8px;
+    left: -9px;
+    display: none;
+}
+
+.contacts__form-button:focus:after{
+    display: block;
+}
+
+.contacts__form-button:hover{
+    background-color: #C283F3;
+    color: white;
+    border-color: #C283F3;
+}
+
+.contacts__generals-container-messendger{
+    width: 63%;
+}
+
+.contacts__href{
+    height: 39px;
+    width: 39px;
+    display: inline-block;
+    outline: none;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: opacity .2s ease;
+}
+
+.contacts__href-teleg{
+    fill: #229ED9;
+}
+
+.contacts__href:nth-last-child(1){
+    margin-right: 0;
+}
+
+.contacts__href:hover{
+   opacity: 0.5;
+}
+
+.contacts__href:focus{
+    opacity: 0.5;
+}
+
+.contacts__href:active{
+    border: 1px solid #9643A4;
+    border-radius: 100%;
+}
+
+.container-maps{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.maps{
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    max-height: 701px;
+}
+
+
+[class*="ground-pane"]{
+    filter: grayscale(1);
+}
+
+.adaptiv-adress{
+    display: none;
+}
+
+@media(max-width:1314px){
+
+    .contacts__title {
+        padding: 0 0 22px 51px;
+    }
+
+    .contacts__container-generals-form {
+        min-width: 47.2%;
+        padding: 123px 0 0 51px;
+        align-items: baseline;
+        display: flex;
+    }
+
+    .contacts__address{
+        width: 62%;
+    }
+
+    .contacts__form-title{
+        margin: 0 0px 20px 0;
+    }
+
+    .contacts__form{
+        width: 77%;
+    }
+
+    .contacts__href{
+        margin: 0 44px 0 0;
+    }
+
+    .contacts__icon-svg{
+        width: 59px;
+        height: 61px;
+    }
+
+}
+
+@media(max-width:950px){
+
+    .contacts__container-generals-form{
+        min-width: 55.2%;
+    }
+
+    .contacts__address{
+        width: 71%;
+        margin: 0px 0px 32px 0;
+    }
+
+    .contacts__form{
+        width: 87%;
+    }
+
+    .contacts__generals-container-messendger{
+        width: 100%;
+    }
+
+    .contacts__form-title-messenger{
+        white-space: initial;
+        width: 94%;
+    }
+}
+
+@media(max-width:600px){
+
+    .contacts__container-generals-form {
+        min-height: 370px;
+        width: 100%;
+        padding: 28px 0 0 16px;
+    }
+
+    .contacts__address{
+        display: none;
+    }
+
+    .adaptiv-adress{
+        display: block;
+    }
+
+    .add{
+        display: block;
+        font-size: 14px;
+        padding: 0 0 0 15px;
+        line-height: 19px;
+        width: 88%;
+        margin: 0px 0px 14px 0;
+    }
+
+    .contacts__title{
+        font-size: 28px;
+        padding: 0px 0 19px 17px;
+    }
+
+    .contacts__generals-container{
+        flex-direction: column-reverse;
+    }
+
+    .contacts__name-shoumrrom-320px{
+        font-size: 18px;
+        display: block;
+    }
+
+    .container-maps{
+        height: 320px;
+    }
+
+    .contacts__form-title{
+        font-size: 18px;
+        margin: 0 0px 23px 0;
+        width: 78%;
+    }
+
+
+    .contacts__form {
+        width: 95%;
+        margin: 0 21px 28px 0;
+    }
+
+    .contacts__input{
+        margin-bottom: 21px;
+    }
+
+    .contacts__form-button{
+        width: 129px;
+        height: 37px;
+        font-size: 12px;
+    }
+
+    .contacts__form-title-messenger{
+        font-size: 18px;
+    }
+
+    .contacts__href{
+        margin: 0 22px 0 0;
+    }
+
+    .contacts__icon-svg {
+        width: 51px;
+        height: 51px;
+    }
+}

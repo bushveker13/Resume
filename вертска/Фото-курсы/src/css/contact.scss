@@ -1,0 +1,432 @@
+@import'__variables.scss';
+@import'_mixin.scss';
+.contact{
+
+    &__title{
+        @include general_title;
+        font-family: "TTFirsNeueBold";
+
+        @media(max-width:$breakpoint_sm){
+            padding: 0 0 0 18px;
+            font-size: 18px;
+        }        
+    }  
+}
+
+.contact__general{
+    position: relative;
+    display: grid;
+    grid-template-columns: 66% 34%;
+    gap: 0 30px;
+
+    &-map{
+        max-width: 850px;
+        width: 100%;
+        height: 100%;
+
+              
+
+    }
+
+    &__form{
+        padding: 0 19px 0 19px;
+        width: 93%;
+
+        &-title{
+            margin: 0;
+            font-family: 'TTFirsNeueRegular';
+            font-weight: 400;
+            font-size: 24px;
+
+            @media(max-width:$breakpoint_sm){
+                font-size: 18px;
+                margin: 0 0 7px 0;
+            }     
+        }
+
+        &-text{
+            margin: 0 0 18px 0;
+            width: 94%;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            color:  #999999;
+
+            @media(max-width:$breakpoint_sm){
+                width: 97%;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+            
+
+    }
+
+    @media(max-width:$breakpoint_xl){
+        grid-template-columns: 61% 39%
+    }
+    @media(max-width:$breakpoint_md){
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(460px, auto) minmax(445px, auto);
+        gap: 32px 0;
+
+        .contact__general-form{
+            width: 70%;
+        }
+    }
+
+    @media(max-width:$breakpoint_sm){
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(472px, auto) minmax(429px, auto);
+        gap: 25px 0;
+
+        .contact__general-form{
+            padding: 0 19px 0 19px;
+            width: 100%;
+        }
+    }
+
+
+    
+}
+
+.contact-form{
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+
+   
+
+    &__text{
+        margin: 0 0 20px 0;
+        @include contact__inputs;
+        background-color: #E9E9E9;
+        border: 1px solid #E5E5E5;
+        transition: .3s ease;
+        outline: none;
+        color: #202020;
+
+        &::placeholder{
+            color: #CACACA;
+            //padding: 0 0 0 23px;
+        }
+
+        &:hover::placeholder{
+            color: #FF6E30;
+        }
+
+        &:focus{
+            border: 1px solid #FF6E30;
+        }
+    }
+
+    &__email{
+        margin: 0 0 20px 0;
+        @include contact__inputs;
+        background-color: #E9E9E9;
+        border: 1px solid #E5E5E5;
+        transition: .3s ease;
+        outline: none;
+        color: #202020;
+
+        &::placeholder{
+            color: #CACACA;
+            //padding: 0 0 0 23px;
+        }
+
+        &:hover::placeholder{
+            color: #FF6E30;
+        }
+
+        &:focus{
+            border: 1px solid #FF6E30;
+        }
+    }
+
+    &__comits{
+        margin: 0 0 14px 0;
+        height: 150px;
+        @include contact__inputs;
+        background-color: #E9E9E9;
+        transition: .3s ease;
+        outline: none;
+        color: #202020;
+        
+        @media(max-width:$breakpoint_md){
+            margin-bottom: 20px;
+        }
+
+        &::placeholder{
+            color: #CACACA;
+            //padding: 0 0 0 23px;
+            z-index: 1;
+        }
+
+        &:hover::placeholder{
+            color: #FF6E30;
+        }
+
+        &:focus{
+            border: 1px solid #FF6E30;
+        }
+    }
+
+    &__button{
+        padding: 18px 22px;
+        align-self: self-start;
+        @include orange__batton;
+        font-family: "TTFirsNeueRegular";
+        @media(max-width:$breakpoint_md){
+            text-align: center;
+            padding: 16px 21px
+        }
+
+        @media(max-width:$breakpoint_sm){
+            font-size: 14px;
+            padding: 12px 22px
+        }
+
+        &:hover{
+            background-color: #BC572B;
+        }
+
+        &:active{
+            background-color: #CE4307;
+        }
+
+       
+    }
+    
+    &__button::after{
+        @include focus_element;
+            opacity: 0;
+            border: 3px solid #CE4307;
+            &:focus::after{
+                opacity: 1;
+            }
+        
+    }
+
+    &__button:focus::after{
+        opacity: 1;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        width: 99%;
+    }
+
+}
+
+[class*="copyrights-pane"] {
+	display: none !important;
+}
+
+[class*="ground-pane"] {
+	filter: grayscale(1);
+}
+
+.contact__general-map-adres{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 4%;
+    background-color: #202020;
+    opacity: 0.5;
+    z-index: 1;
+
+    @media(max-width:$breakpoint_xl){
+    top: 86%;
+    right: 55%;
+    bottom: 0px;
+    left: 0%;
+    width: 61%;
+    }
+
+    @media(max-width:$breakpoint_md){
+        top: 46%;
+        right: 46%;
+        bottom: 50%;
+        left: 0%;
+        width: 100%;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        top: 48%;
+        right: 46%;
+        bottom: 49%;
+        left: 0%;
+        width: 100%;
+    }
+
+}
+
+.general-adress{
+    padding: 25px 20px 0 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 52px;
+    width: 27.9%;
+    background-color: #202020;
+    opacity: 0.5;
+    transform: translateX(-33%);
+    transition: .3s ease-out;
+    z-index: -1;
+    opacity: 0;
+
+    .location-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 92%;
+        font-style: normal;
+
+        @media(max-width:$breakpoint_xl){
+            display: block;
+            width: 64%;
+        }
+
+        @media(max-width:$breakpoint_sm){
+            display: block;
+            width: 97%;
+        }
+
+    }
+    
+    &__nameStydio{
+        margin: 0 0 0 0;
+        color: $colorWhiteText;
+        font-family: 'TTFirsNeueRegular';
+        font-size: 24px;
+        
+        @media(max-width:$breakpoint_md){
+            margin: 0 0 9px 0;
+        }
+
+        @media(max-width:$breakpoint_sm){
+            font-size: 18px;
+        }
+    }
+
+    &__location {
+        margin: 0 0 0 0;
+        width: 92%;
+        color: $colorWhiteText;
+        font-weight: 400;
+        line-height: 28px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+
+        @media(max-width:$breakpoint_xl){
+            display: inline;
+        }
+
+        @media(max-width:$breakpoint_md){
+            display: inline-block;
+            margin: 0 0 9px 0;
+        }
+
+        @media(max-width:$breakpoint_sm){
+            line-height: 18px;
+            font-size: 14px;
+        }
+    }
+
+    &__tel{
+        display: flex;
+        color: $colorOrange;
+        letter-spacing: .9px;
+        @media(max-width:$breakpoint_xl){
+            float: right;
+        }
+
+        @media(max-width:$breakpoint_md){
+            float: none;
+        }
+    }
+
+    @media(max-width:$breakpoint_xl){
+        padding: 26px 20px 0 31px;
+        display: flex;
+        top: 66%;
+        left: 0px;
+        height: 34%;
+        width: 60.9%;
+        transform: translateY(33%); 
+    }
+
+    @media(max-width:$breakpoint_md){
+        top: 33%;
+        height: 18%;
+        width: 100%;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        padding: 26px 20px 0 21px;
+        top: 34%;
+        height: 17%;
+    }
+
+
+
+}
+
+.butn-open{
+    align-self: center;
+    border: $border-none;
+    color: $colorWhiteText;
+    transform:rotate(90deg);
+    
+    @media(max-width:$breakpoint_xl){
+        transform:rotate(0deg);
+    
+    }
+}
+
+.butn-close{
+    display: block;
+    margin-left: auto;
+    border: $border-none;
+    background-color: #999999;
+
+    @media(max-width:$breakpoint_xl){
+        order: 1;
+        align-self: baseline;
+    }
+}
+
+.active{
+    transform: translateX(0);
+    z-index: 0;
+    opacity: 0.5;
+    @media(max-width:$breakpoint_xl){
+        transform: translateY(0);
+    
+    }
+}
+
+.active-btn{
+    z-index: -1;
+    opacity: 0;
+}
+
+.contact__icon{
+    width: 21px;
+    height: 21px;
+    order: -1;
+}
+
+@media(max-width:$breakpoint_sm){
+
+    .pading-nonne{
+        padding: 0;
+    }
+
+}

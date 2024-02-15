@@ -1,0 +1,129 @@
+@import'__variables.scss';
+@import'_mixin.scss';
+
+.footer{
+    background-color: #202020;
+    padding: 16px 0 10px 0;
+    @media(max-width:$breakpoint_md){
+        padding:0;
+    }
+}
+
+.footer-general{
+    display: flex;
+    justify-content: space-between;
+    background-color: #202020;
+    &__container{
+        color: #CACACA;
+
+        &-text{
+            font-family: 'TTFirsNeueRegular';
+            color: #E9E9E9;
+            font-size: 14px;
+
+            @media(max-width:$breakpoint_md){
+                margin: 0;
+            }
+
+            @media(max-width:$breakpoint_md){
+                font-size: 10px;
+            }
+        }
+
+        @media(max-width:$breakpoint_sm){
+            display: none;
+        }
+    }
+
+    &__text{
+        width: 38%;
+        color: #CACACA;
+        font-weight: 400;
+        line-height: 22px;
+        p{
+            margin: 0;
+        }
+
+        @media(max-width:$breakpoint_md){
+            display: none;
+        }
+
+        
+        
+    }
+
+    &__social{
+        color: #CACACA;
+
+        ul{
+            display: flex;
+            padding: 0;
+            justify-content: space-evenly;
+
+            @media(max-width:$breakpoint_md){
+                margin: 0;
+            }
+
+            @media(max-width:$breakpoint_sm){
+                margin: 0 auto;
+                width: 51%;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @media(max-width:$breakpoint_md){
+        min-height: 106px;
+        height: 100%;
+        align-items: center;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        min-height: 121px;
+        justify-content: center;
+    }
+}
+
+.footer-general__href{
+    outline: none;
+    &:hover .footer__icon{
+        fill: $color_hover
+    }
+
+    &:focus .footer__icon{
+        fill: $color_focus
+    }
+
+    &:active .footer__icon{
+        fill: $color_active;
+    }
+}
+
+.footer__icon{
+    height: 30px;
+    width: 30px;
+    fill: $colorWhiteText;
+    transition: fill .3s;
+
+   
+}
+
+.footer__logo-mb{
+    background-color: #4A4A4A;
+    display: none;
+
+    @media(max-width:$breakpoint_sm){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__logo-img{
+        width: 35%;
+        padding-top: 18px;
+    }
+
+    .footer__logo-text{
+
+    }
+}

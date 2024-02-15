@@ -1,0 +1,121 @@
+.footer {
+  background-color: #202020;
+  padding: 16px 0 10px 0;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 0;
+  }
+}
+
+.footer-general {
+  display: flex;
+  justify-content: space-between;
+  background-color: #202020;
+}
+.footer-general__logo {
+  color: #CACACA;
+}
+.footer-general__logo-text {
+  font-family: "TTFirsNeueRegular";
+  color: #E9E9E9;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .footer-general__logo-text {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .footer-general__logo-text {
+    font-size: 10px;
+  }
+}
+@media (max-width: 635px) {
+  .footer-general__logo {
+    display: none;
+  }
+}
+.footer-general__text {
+  width: 38%;
+  color: #CACACA;
+  font-weight: 400;
+  line-height: 22px;
+}
+.footer-general__text p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .footer-general__text {
+    display: none;
+  }
+}
+.footer-general__social {
+  color: #CACACA;
+}
+.footer-general__social ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+}
+@media (max-width: 768px) {
+  .footer-general__social ul {
+    margin: 0;
+  }
+}
+@media (max-width: 635px) {
+  .footer-general__social ul {
+    margin: 0 auto;
+    width: 51%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .footer-general {
+    min-height: 106px;
+    height: 100%;
+    align-items: center;
+  }
+}
+@media (max-width: 635px) {
+  .footer-general {
+    min-height: 121px;
+    justify-content: center;
+  }
+}
+
+.footer-gemeral__href {
+  outline: none;
+}
+.footer-gemeral__href:hover .footer__icon {
+  fill: #FF6E30;
+}
+.footer-gemeral__href:focus .footer__icon {
+  fill: #BC572B;
+}
+.footer-gemeral__href:active .footer__icon {
+  fill: #BC572B;
+}
+
+.footer__icon {
+  height: 30px;
+  width: 30px;
+  fill: #FFFFFF;
+  transition: fill 0.3s;
+}
+
+.footer-general__logo-mb {
+  background-color: #4A4A4A;
+  display: none;
+}
+@media (max-width: 635px) {
+  .footer-general__logo-mb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer-general__logo-mb .footer_logo_img {
+  width: 35%;
+  padding-top: 18px;
+}/*# sourceMappingURL=footer.css.map */

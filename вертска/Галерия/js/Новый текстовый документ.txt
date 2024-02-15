@@ -1,0 +1,44 @@
+function function1(event) {
+	document.querySelector('.modal').classList.add('modal-active');
+}
+
+let readers = document.querySelectorAll('.oct');
+for (let i=0; i<readers.length; i++) {
+  readers[i].onclick = function1;
+}
+
+// закртиые модального окна
+  document.querySelector('.modal-button-close') .addEventListener('click', function(){
+  document.querySelector('.modal').classList.remove('modal-active')
+})
+
+//
+
+function function2(event) {
+	document.querySelector('.modal-2').classList.add('modal-active');
+}
+
+
+let modal = document.querySelectorAll('.oct-2');
+for (let i=0; i<modal.length; i++) {
+  modal[i].onclick = function2;
+}
+
+document.querySelector('.modal-button-close-2') .addEventListener('click', function(){
+  document.querySelector('.modal-2').classList.remove('modal-active')
+})
+
+//
+
+function function3(event) {
+	document.querySelector('.modal-3').classList.add('modal-active');
+}
+
+let modal3 = document.querySelectorAll('.oct-3');
+for (let i=0; i<modal3.length; i++) {
+  modal3[i].onclick = function3;
+}
+
+document.querySelector('.modal-button-close-3') .addEventListener('click', function(){
+  document.querySelector('.modal-3').classList.remove('modal-active')
+})

@@ -1,0 +1,424 @@
+.contact__title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  font-family: "TTFirsNeueBold";
+}
+@media (max-width: 635px) {
+  .contact__title {
+    padding: 0 0 0 18px;
+    font-size: 18px;
+  }
+}
+
+.contact__general {
+  position: relative;
+  display: grid;
+  grid-template-columns: 66% 34%;
+  gap: 0 30px;
+}
+.contact__general-map {
+  max-width: 850px;
+  width: 100%;
+  height: 100%;
+}
+.contact__general__form {
+  padding: 0 19px 0 19px;
+  width: 93%;
+}
+.contact__general__form-title {
+  margin: 0;
+  font-family: "TTFirsNeueRegular";
+  font-weight: 400;
+  font-size: 24px;
+}
+@media (max-width: 635px) {
+  .contact__general__form-title {
+    font-size: 18px;
+    margin: 0 0 7px 0;
+  }
+}
+.contact__general__form-text {
+  margin: 0 0 18px 0;
+  width: 94%;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #999999;
+}
+@media (max-width: 635px) {
+  .contact__general__form-text {
+    width: 97%;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .contact__general {
+    grid-template-columns: 61% 39%;
+  }
+}
+@media (max-width: 768px) {
+  .contact__general {
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(460px, auto) minmax(445px, auto);
+    gap: 32px 0;
+  }
+  .contact__general .contact__general-form {
+    width: 70%;
+  }
+}
+@media (max-width: 635px) {
+  .contact__general {
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(472px, auto) minmax(429px, auto);
+    gap: 25px 0;
+  }
+  .contact__general .contact__general-form {
+    padding: 0 19px 0 19px;
+    width: 100%;
+  }
+}
+
+.contact-form {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form__text {
+  margin: 0 0 20px 0;
+  padding: 14px 0;
+  border: none;
+  background-color: #E9E9E9;
+}
+@media (max-width: 635px) {
+  .contact-form__text {
+    padding: 9px 0;
+  }
+}
+.contact-form__text::-moz-placeholder {
+  color: #CACACA;
+  padding: 0 0 0 23px;
+}
+.contact-form__text::placeholder {
+  color: #CACACA;
+  padding: 0 0 0 23px;
+}
+.contact-form__email {
+  margin: 0 0 20px 0;
+  padding: 14px 0;
+  border: none;
+  background-color: #E9E9E9;
+}
+@media (max-width: 635px) {
+  .contact-form__email {
+    padding: 9px 0;
+  }
+}
+.contact-form__email::-moz-placeholder {
+  color: #CACACA;
+  padding: 0 0 0 23px;
+}
+.contact-form__email::placeholder {
+  color: #CACACA;
+  padding: 0 0 0 23px;
+}
+.contact-form__comits {
+  margin: 0 0 14px 0;
+  height: 150px;
+  padding: 14px 0;
+  border: none;
+  background-color: #E9E9E9;
+}
+@media (max-width: 635px) {
+  .contact-form__comits {
+    padding: 9px 0;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form__comits {
+    margin-bottom: 20px;
+  }
+}
+.contact-form__comits::-moz-placeholder {
+  color: #CACACA;
+  padding: 0 0 0 23px;
+  z-index: 1;
+}
+.contact-form__comits::placeholder {
+  color: #CACACA;
+  padding: 0 0 0 23px;
+  z-index: 1;
+}
+.contact-form__button {
+  padding: 18px 22px;
+  align-self: self-start;
+  position: relative;
+  border: none;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #FF6E30;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  font-family: "TTFirsNeueRegular";
+}
+@media (max-width: 768px) {
+  .contact-form__button {
+    text-align: center;
+    padding: 16px 21px;
+  }
+}
+@media (max-width: 635px) {
+  .contact-form__button {
+    font-size: 14px;
+    padding: 12px 22px;
+  }
+}
+.contact-form__button:hover {
+  background-color: #BC572B;
+}
+.contact-form__button:active {
+  background-color: #CE4307;
+}
+.contact-form__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border: 3px solid #CE4307;
+}
+.contact-form__button::after:focus::after {
+  opacity: 1;
+}
+.contact-form__button:focus::after {
+  opacity: 1;
+}
+@media (max-width: 635px) {
+  .contact-form {
+    width: 99%;
+  }
+}
+
+[class*=copyrights-pane] {
+  display: none !important;
+}
+
+[class*=ground-pane] {
+  filter: grayscale(1);
+}
+
+.contact__general-map-adres {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 4%;
+  background-color: #202020;
+  opacity: 0.5;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .contact__general-map-adres {
+    top: 86%;
+    right: 55%;
+    bottom: 0px;
+    left: 0%;
+    width: 61%;
+  }
+}
+@media (max-width: 768px) {
+  .contact__general-map-adres {
+    top: 46%;
+    right: 46%;
+    bottom: 50%;
+    left: 0%;
+    width: 100%;
+  }
+}
+@media (max-width: 635px) {
+  .contact__general-map-adres {
+    top: 48%;
+    right: 46%;
+    bottom: 49%;
+    left: 0%;
+    width: 100%;
+  }
+}
+
+.general-adress {
+  padding: 25px 20px 0 7px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 52px;
+  width: 27.9%;
+  background-color: #202020;
+  opacity: 0.5;
+  transform: translateX(-33%);
+  transition: 0.3s ease-out;
+  z-index: -1;
+  opacity: 0;
+}
+.general-adress .location-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 92%;
+  font-style: normal;
+}
+@media (max-width: 1024px) {
+  .general-adress .location-content {
+    display: block;
+    width: 64%;
+  }
+}
+@media (max-width: 635px) {
+  .general-adress .location-content {
+    display: block;
+    width: 97%;
+  }
+}
+.general-adress__nameStydio {
+  margin: 0 0 0 0;
+  color: #FFFFFF;
+  font-family: "TTFirsNeueRegular";
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .general-adress__nameStydio {
+    margin: 0 0 9px 0;
+  }
+}
+@media (max-width: 635px) {
+  .general-adress__nameStydio {
+    font-size: 18px;
+  }
+}
+.general-adress__location {
+  margin: 0 0 0 0;
+  width: 92%;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 1024px) {
+  .general-adress__location {
+    display: inline;
+  }
+}
+@media (max-width: 768px) {
+  .general-adress__location {
+    display: inline-block;
+    margin: 0 0 9px 0;
+  }
+}
+@media (max-width: 635px) {
+  .general-adress__location {
+    line-height: 18px;
+    font-size: 14px;
+  }
+}
+.general-adress__tel {
+  display: flex;
+  color: #FF6E30;
+  letter-spacing: 0.9px;
+}
+@media (max-width: 1024px) {
+  .general-adress__tel {
+    float: right;
+  }
+}
+@media (max-width: 768px) {
+  .general-adress__tel {
+    float: none;
+  }
+}
+@media (max-width: 1024px) {
+  .general-adress {
+    padding: 26px 20px 0 31px;
+    display: flex;
+    top: 66%;
+    left: 0px;
+    height: 34%;
+    width: 60.9%;
+    transform: translateY(33%);
+  }
+}
+@media (max-width: 768px) {
+  .general-adress {
+    top: 33%;
+    height: 18%;
+    width: 100%;
+  }
+}
+@media (max-width: 635px) {
+  .general-adress {
+    padding: 26px 20px 0 21px;
+    top: 34%;
+    height: 17%;
+  }
+}
+
+.butn-open {
+  align-self: center;
+  border: none;
+  color: #FFFFFF;
+  transform: rotate(90deg);
+}
+@media (max-width: 1024px) {
+  .butn-open {
+    transform: rotate(0deg);
+  }
+}
+
+.butn-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: #999999;
+}
+@media (max-width: 1024px) {
+  .butn-close {
+    order: 1;
+    align-self: baseline;
+  }
+}
+
+.active {
+  transform: translateX(0);
+  z-index: 0;
+  opacity: 0.5;
+}
+@media (max-width: 1024px) {
+  .active {
+    transform: translateY(0);
+  }
+}
+
+.active-btn {
+  z-index: -1;
+  opacity: 0;
+}
+
+.contact__icon {
+  width: 21px;
+  height: 21px;
+  order: -1;
+}
+
+@media (max-width: 635px) {
+  .pading-nonne {
+    padding: 0;
+  }
+}/*# sourceMappingURL=contact.css.map */

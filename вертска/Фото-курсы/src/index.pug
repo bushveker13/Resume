@@ -1,0 +1,249 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv ="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="preload" href="./fonts/roboto-bold-webfont.woff2" as="font" )
+        link(rel="preload" href="./fonts/roboto-regular-webfont.woff2" as="font")
+        link(rel="preload" href="./fonts/TTFirsNeue-Regular.woff2" as="font" )
+        link(rel="preload" href="./fonts/TTFirsNeue-DemiBold.woff2" as="font" )
+        <!-- cs -->
+        link(rel="stylesheet", href="./style/normalize.css")
+        link(rel="stylesheet", href="./style.css")
+        <!-- js -->
+        
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" defer)
+        script(src = "./java/java.js" defer )
+
+    body 
+        header
+            .container.header-first
+                .header-first__general
+                    img(src="./images/Logo.webp", alt="#").header-first__logo
+                    ul.header-first__list
+                        li
+                            button.header-first__item-content   О студии 
+                        li
+                            button.header-first__item-content   Наши проекты
+                        li
+                            button.header-first__item-content   Услуги
+                        li
+                            button.header-first__item-content  Мастер-классы
+                        li
+                            button.header-first__item-content   Контакты
+                    form.header-first__form-input-serch(action="#" method='POST') 
+                        input.header-input(type="text" placeholder="Что будем иcкать?")
+                    div   
+                        button.header-first__button-serch
+                            svg.header-first__icon(name="hidden")
+                                use(xlink:href="#hidden")
+                        button.header-first__button-serch-close x
+            .container.header-two
+                .header-two__general
+                    button.header-two__nav-butn
+                        svg.header-two__icon-burger(name="hidden")
+                            use(xlink:href="#burger")
+                    .burger
+                        button.burger__close x
+                        nav.burger__nav
+                            ul.burger__list
+                                li 
+                                    button.burger__item-content  О студии 
+                                li 
+                                    button.burger__item-content  Наши проекты
+                                li 
+                                    button.burger__item-content  Услуги
+                                li
+                                    button.burger__item-content  Мастер-класс
+                                li
+                                    button.burger__item-content  Контакты
+                        div.burger__adress__tel +7 495 424-23-532    
+                            svg.burger__adress__tel-icon(name="hidden")
+                                use(xlink:href="#mdi_call")
+                         
+
+                    nav
+                        ul.header-two__list
+                            li
+                                button.header-two__item-content  О студии 
+                            li
+                                button.header-two__item-content  Наши проекты
+                            li
+                                button.header-two__item-content  Услуги
+                            li
+                                button.header-two__item-content  Мастер-классы
+                            li
+                                button.header-two__item-content  Контакты 
+                        
+
+        main
+            h1 Фото мастертская
+            section.container
+                .participant
+                    .participant__content
+                        span.participant__content-hashtag #мастеркласс
+                        p.participant__content-masterName Мастер-класс от Игоря Робова
+                        p.participant__content-date Неоновый фотосет 2.0 <br>7 июля 20:00
+                        a(href="#").participant__content-href Узнать больше
+                    .b
+                        h2.b__h2 Работы участников предыдущего мастер-класса
+                        picture
+                            source(srcset="./images/Rectangle444.webp" media="(max-width: 350px)") 
+                            source(srcset="./images/Rectangle4.webp" media="(max-width: 635px)") 
+                            source(srcset="./images/Rectangle444.webp" media="(max-width: 768px)") 
+                            source(srcset="./images/Rectangle44.webp"  media="(max-width: 1024px)")
+                            img(src="./images/Rectangle4.webp", alt="#")
+
+                    .c
+                        picture
+                            source(srcset="./images/Rectangle66.webp"  media="(max-width: 1024px)")
+                            img.participant__img(src="./images/Rectangle6.webp", alt="#")
+                    .d
+                        img.participant__img(src="./images/Rectangle3.webp", alt="#")
+            section.about-us
+                .container.about-us__general
+                    .about-us__left-blok
+                        h2.about-us__title О студии
+                        p.about-us__text-content В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.
+                    .about-us__right-blok
+                        span.about-us__form-title Подписаться на рассылку
+                        form(action="#").about-us__form
+                            
+                            input(type="email" placeholder="Email").about-us__form-input
+                            button(type="submit").about-us__form-button Отправить
+            section.our-projects
+                .container    
+                    h2.our-projects__title Наши проекты
+                    ul.our-projects__general
+                        li.landscape
+                            span.our-projects__general-content-hashtag #пейзаж
+                            picture
+                                source(srcset="./images/landscape2.webp"  media="(max-width: 1024px)")
+                                source(srcset="./images/landscape2.webp"  media="(max-width: 1024px)")
+                                img.our-projects__img(src="./images/landscape.webp", alt="#" aria-hidden="true")
+                            p.class-reset.landscape__text Синтетически, смешаны с не уникальными данными до степени…
+                            span.our-projects__general-contenet-date 
+                                svg.our-projects__icon(name="hidden")
+                                    use(xlink:href="#mdi_calendar_today")
+                                span 16 июня
+                        li.portrait
+                            span.our-projects__general-content-hashtag #портрет
+                            picture
+                                source(srcset="./images/portrait211.webp"  media="(max-width: 635px)")
+                                source(srcset="./images/portrait21.webp"  media="(max-width: 1024px)")
+                                img.our-projects__img(src="./images/portrait.webp", alt="#" aria-hidden="true")
+                            p.class-reset.portrait__text В своём стремлении улучшить опыт мы упускаем, что явные...
+                            span.our-projects__general-contenet-date 
+                                svg.our-projects__icon(name="hidden")
+                                    use(xlink:href="#mdi_calendar_today")
+                                span 28 мая
+                        li.object
+                            span.our-projects__general-content-hashtag #предмет
+                            picture
+                                source(srcset="./images/object2222.webp"  media="(max-width: 635px)")
+                                source(srcset="./images/object222.webp"  media="(max-width: 768px)")
+                                source(srcset="./images/object2.webp"  media="(max-width: 1024px)")
+                                img.our-projects__img(src="./images/object.webp", alt="#" aria-hidden="true")
+                            p.class-reset.object__text Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада
+                            span.our-projects__general-contenet-date 
+                                svg.our-projects__icon(name="hidden")
+                                    use(xlink:href="#mdi_calendar_today")
+                                span 14 мая
+                        li.analysis-job
+                            div.our-projects__container
+                                span.our-projects__general-contenet-date 
+                                    svg.our-projects__icon(name="hidden")
+                                        use(xlink:href="#mdi_calendar_today")
+                                    span.analysis-job__date 9 апреля
+                                span.our-projects__general-content-hashtag #fuji
+                            h2.analysis-job__title Cемантический <br> разбор
+                            p.analysis-job__text В рамках спецификации современных стандартов, интерактивные прототипы
+                            a(href="#").analysis-job__href О проекте
+                        li.oblivion
+                            div.our-projects__container
+                                span.our-projects__general-contenet-date 
+                                    svg.our-projects__icon(name="hidden")
+                                        use(xlink:href="#mdi_calendar_today")
+                                    span.oblivion__date 20 марта
+                                span.our-projects__general-content-hashtag #проектзабвение
+                            h2.oblivion__title Забвение
+                            p.oblivion__text Играет важную роль в формировании<br> глубокомысленных рассуждений
+                            a(href="#").oblivion__href О проекте
+                        li.retouch
+                            span.our-projects__general-content-hashtag #ретушь
+                            picture
+                                source(srcset="./images/retouch2.webp"  media="(max-width: 635px)")
+                                source(srcset="./images/retouch2.webp"  media="(max-width: 1024px)")
+                                img.our-projects__img(src="./images/retouch.webp", alt="#" aria-hidden="true")
+                            p.class-reset Как принято считать, многие известные личности и по сей день остаются уделом либералов…
+                            span.our-projects__general-contenet-date 
+                                svg.our-projects__icon(name="hidden")
+                                    use(xlink:href="#mdi_calendar_today")
+                                span 9 марта
+                        li.portrait2
+                            span.our-projects__general-content-hashtag #портрет
+                            picture
+                                source(srcset="./images/portrait222.webp"  media="(max-width: 635px)")
+                                source(srcset="./images/portrait22.webp"  media="(max-width: 1024px)")
+                                img.our-projects__img(src="./images/portrait2.webp", alt="#" aria-hidden="true")
+                            p.class-reset С учётом сложившейся международной обстановки, новая модель организационной…
+                            span.our-projects__general-contenet-date 
+                                svg.our-projects__icon(name="hidden")
+                                    use(xlink:href="#mdi_calendar_today")
+                                span 1 марта
+            section.contact   
+                .container.pading-nonne
+                    h2.contact__title Контакты
+                    .contact__general
+                        .contact__general-map#map
+                        .contact__general-map-adres 
+                            button.butn-open Подробнее
+                        .general-adress
+                            button.butn-close X 
+                            address.location-content 
+                                p.general-adress__nameStydio Студия «High pass» 
+                                p.general-adress__location 107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+                                div.general-adress__tel +7 495 424-23-532    
+                                    svg.contact__icon(name="hidden")
+                                        use(xlink:href="#mdi_call")
+                                    
+                             
+                        .contact__general-form
+                            h3.contact__general__form-title Оставить заявку
+                            p.contact__general__form-text Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
+                            form.contact-form(action="#" method='POST')
+                                input.contact-form__text(type="text" placeholder='Имя')
+                                input.contact-form__email(type="email" placeholder='Email')
+                                textarea.contact-form__comits( cols="30", rows="10" placeholder='Комментарии')
+                                
+                                button(type='submit').contact-form__button Отправить
+        footer.footer
+            .container.footer-general
+                .footer-general__container
+                   img(src="./images/Logo.webp", alt="#").footer-general__container-img
+                   p.footer-general__logo-text Фотостудия High pass® 2018–2020
+                .footer-general__text
+                    p Которая из моих фотографий самая любимая?<br> Та, которую я собираюсь снять завтра.<br>© Имоджен Каннингем
+                .footer-general__social
+                        span Больше интересного:
+                        ul
+                            li
+                                a.footer-general__href(href="#")   
+                                    svg.footer__icon(name="hidden")
+                                        use(xlink:href="#ok")
+                            li
+                                
+                                 a.footer-general__href(href="#")   
+                                    svg.footer__icon(name="hidden")
+                                        use(xlink:href="#vk")
+            .footer__logo-mb
+                    img(src="./images/Logo.webp", alt="#").footer__logo-img
+                    p.footer__logo-text Фотостудия High pass® 2018–2020
+        include img/svg.svg
+    
+   
+  
+
+

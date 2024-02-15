@@ -1,0 +1,640 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: local("bold"),
+        url('./font/OpenSansRegular.woff2') format('woff2'),
+        url('./font/OpenSansRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local("medium"),
+        url('./font/OpenSansSemiBold.woff2') format('woff2'),
+        url('./font/OpenSansSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #E5E5E5;
+    position: relative;
+    margin: 0;
+}
+
+.general__secrh {
+    display: flex;
+    background-color: #FFFFFF;
+    height: 90px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.searh__input {
+    height: 44px;
+    width: 45%;
+    border-color: rgba(51, 51, 51, 0.2);
+    border-width: 1px;
+}
+
+.searh__input::-webkit-input-placeholder {
+    color: #B0B0B0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.label {
+    width: 51px;
+    height: 51px;
+    margin-right: 53px;
+}
+
+.container {
+    margin: 0 auto 0 auto;
+    max-width: 100%;
+    padding: 0 20px 0 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.table__button {
+    border: none;
+    background-color: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.butn-id {
+    color: #9873FF;
+    width: 4%;
+    cursor: pointer;
+}
+
+.tablebody {
+    border-bottom: 1px solid;
+}
+
+.iconAdd {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 1px;
+    fill: #9873FF;
+    border-radius: 100%;
+    transition: background-color .5s;
+}
+
+.modal__addContact:hover .iconAdd,
+.modal-change__addContact:hover .iconAdd {
+    background-color: #9873FF;
+}
+
+.icon-id {
+    width: 9px;
+    height: 9px;
+}
+
+.icon-pens,
+.delete-icon,
+.deleteModal-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.deleteModal-icon {
+    fill: #B0B0B0;
+    margin-right: 0;
+}
+
+.delete-icon {
+    fill: #F06A4D;
+}
+
+.primal {
+    transform: rotate(186deg);
+}
+
+.sort .icon-id {
+    transform: rotate(186deg);
+}
+
+.sort .primal {
+    transform: rotate(0deg);
+}
+
+.butn-fio {
+    width: 14%;
+}
+
+.sort__SNP::after {
+    content: "А-Я";
+    color: #9873FF;
+    font-size: 10px;
+}
+
+.general__container-table {
+    margin: 0 auto 0 auto;
+    width: 90%;
+}
+
+table {
+    min-height: 400px;
+    background-color: #FFFFFF;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto 50px auto;
+}
+
+thead {
+    background-color: #E5E5E5;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+
+td {
+    height: 60px;
+}
+
+.id__td {
+    width: 13%;
+}
+
+.fio__td {
+    max-width: 100%;
+    width: 20%;
+}
+
+.contact__td {
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-display-contacts {
+    border: 1px solid #9873FF;
+    border-radius: 100%;
+    font-size: 8px;
+    font-weight: 600;
+    height: 63%;
+    width: 73%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.create__data {
+    width: 18%;
+    display: flex;
+}
+
+.modal__addContact,
+.modal-change__addContact {
+    width: 25%;
+    align-self: center;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    transition: color .5s;
+}
+
+.btn-delet_contact {
+    border: 1px solid #C8C5D1;
+    min-width: 27px;
+    cursor: pointer;
+    height: 100%;
+}
+
+.btn-delet_contact:hover {
+    border-color: #F06A4D;
+}
+
+.btn-delet_contact:hover .deleteModal-icon {
+    fill: #F06A4D;
+}
+
+.modal__addContact:hover,
+.modal-change__addContact:hover {
+    color: #9873FF;
+}
+
+.save-contact,
+.btn__changesave {
+    background-color: #9873FF;
+    width: 25%;
+    align-self: center;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 144px;
+    min-height: 44px;
+    padding: 0 5px 0 5px 0;
+    border: 1px solid #9873FF;
+    margin-bottom: 5px;
+    transition: color .5s, background-color .5s;
+    cursor: pointer;
+}
+
+.save-contact:hover {
+    background-color: #B89EFF;
+    color: #FFFFFF;
+}
+
+.save-contact:active {
+    background-color: #8052FF;
+    color: #FFFFFF;
+}
+
+.bth__modalsdd-cancel,
+.btn__changedelete {
+    width: 25%;
+    border: none;
+    border-bottom: 1px solid #333333;
+    background-color: inherit;
+    align-self: center;
+    margin-bottom: 25px;
+    font-size: 12px;
+    width: max-content;
+    padding: 0;
+    cursor: pointer;
+}
+
+.id__changes {
+    width: 18%;
+}
+
+.modal__base {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(75, 69, 74, 0.3);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    background-color: #FFFFFF;
+}
+
+.header__modal {
+    display: flex;
+    padding-top: 22px;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.title__model {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.id_change {
+    color: #B0B0B0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer__modal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-close {
+    border: none;
+    background-color: inherit;
+    width: fit-content;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+
+.modal__contacts,
+.modal__contacts2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #C8C5D1;
+    min-height: 35px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.padding-tami {
+    padding: 0 5px;
+}
+
+.general__contact {
+    display: flex;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+
+.button-add {
+    margin: 0 auto 0 auto;
+    width: 20%;
+    display: block;
+    font-weight: 600;
+    border: 1px solid #9873FF;
+    color: #9873FF;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .6s, color .6s;
+}
+
+.button-add:hover {
+    background-color: #B89EFF;
+    color: #FFFFFF;
+}
+
+.button-add:active {
+    background-color: #8052FF;
+    color: #FFFFFF;
+}
+
+.icon-add {
+    width: 22px;
+    height: 16px;
+    fill: #9873FF;
+    transition: fill .6s;
+}
+
+.button-add:hover .icon-add {
+    fill: #FFFFFF;
+}
+
+.list {
+    width: 90%;
+    padding: 0;
+}
+
+.item {
+    position: relative;
+    height: 25px;
+    margin-bottom: 56px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.input {
+    position: absolute;
+    border: none;
+    border-bottom: 1px solid #C8C5D1;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input__span {
+    position: absolute;
+    z-index: 0;
+    bottom: 5px;
+}
+
+.star {
+    color: #9873FF;
+}
+
+.choices {
+    margin-bottom: 0;
+    width: 35%;
+}
+
+.choices[data-type*=select-one]::after {
+    display: none;
+}
+
+.choices[data-type*=select-one]::before {
+    content: '';
+    position: absolute;
+    border-left: 1px solid #9873FF;
+    border-bottom: 1px solid #9873FF;
+    height: 7px;
+    width: 7px;
+    right: 14px;
+    bottom: 50%;
+    transform: rotate(-45deg);
+}
+
+.choices[data-type*=select-one]:focus:before {
+    transform: rotate(135deg);
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+    display: none;
+}
+
+.upa {
+    color: red;
+}
+
+.input__personal-contact {
+    border-color: #C8C5D1;
+    border-bottom: 1px solid #C8C5D1;
+    border-top: 1px solid #C8C5D1;
+    border-right: none;
+    border-left: none;
+    padding: 1px 5px;
+    width: 65%;
+}
+
+.relatic {
+    position: relative;
+}
+
+
+.butntoltip {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.general__toltip {
+    display: flex;
+}
+
+.toltip {
+    display: none;
+    position: absolute;
+    background-color: #5B46A9;
+    padding: 7px 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    width: max-content;
+    bottom: 63%;
+    left: 7%;
+    transform: translateY(-64%) translateX(-37%);
+
+}
+
+.toltip::after {
+    content: '';
+    border: 1px solid #5B46A9;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -8px;
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background-color: #5B46A9;
+}
+
+.toltip_delete {
+    display: none;
+    position: absolute;
+    background-color: #5B46A9;
+    padding: 7px 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    width: max-content;
+    z-index: 1;
+    transform: translateY(-64%) translateX(-37%);
+    top: -9px;
+    left: -3px;
+}
+
+.toltip_delete::after {
+    content: '';
+    border: 1px solid #5B46A9;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -8px;
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background-color: #5B46A9;
+}
+
+.color {
+    display: block;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.bth-delete,
+.buth-change {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-weight: 400;
+}
+
+.modal__base-of {
+    display: none;
+}
+
+.butr {
+    display: block;
+}
+
+.buth-change1 {
+    color: #9873FF;
+}
+
+.id-2 {
+    color: #C8C5D1;
+}
+
+.butjs {
+    display: block;
+}
+
+.btn__changesave {
+    display: block;
+}
+
+.sr {
+    display: block;
+    position: static;
+    font-size: 10px;
+}
+
+.btn-delet_contact:hover~.toltip_delete {
+    display: block;
+}
+
+.loading {
+    height: 12px;
+    width: 12px;
+    animation: rotate 5s infinite linear;
+    margin-right: 5px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(45deg);
+
+    }
+
+    25% {
+        transform: rotate(136deg);
+    }
+
+    50% {
+        transform: rotate(230deg);
+    }
+
+    75% {
+        transform: rotate(323deg);
+    }
+
+    to {
+        transform: rotate(411deg);
+    }
+}
+
+.loading~.icon-pens {
+    display: none;
+}
