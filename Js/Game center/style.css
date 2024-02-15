@@ -1,0 +1,370 @@
+
+
+/* ГОРОДА */
+
+.plaer {
+  border: 1px solid #22559c;
+  background-color: aqua;
+  border-radius: 10px;
+  min-width: 10%;
+  padding: 5px;
+  width: 80%;
+}
+.comp {
+  border: 1px solid #dc143c;
+  background-color: #f08080;
+  border-radius: 10px;
+  min-width: 10%;
+  padding: 5px;
+  width: 80%;
+}
+
+/* Крестики нолики */
+
+#field{
+  margin-bottom: 50px;
+}
+
+.tic-tac-toe{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 97%;
+}
+
+.icon-tic{
+  width: 100px;
+  height: 100px;
+  fill: #1886FF;
+}
+
+.icon-toc{
+  width: 50px;
+  height: 50px;
+  fill: #ED3CCA;
+}
+
+.field_td {
+  width: 110px;
+  height: 110px;
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.icon_comp,
+.icon_human{
+  width: 25px;
+  height: 25px;
+}
+
+.tictakbutn{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 0;
+}
+.border{
+  border-color: #dc143c;
+}
+
+.general-tic-tac-mode-game{
+  display: flex;
+}
+
+.game_mode{
+  position: absolute;
+  background-color: rgba(180, 180, 180, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_mode2,
+.human,
+.ai{
+  display: inline-flex;
+  align-items: center;
+}
+
+/* найти число */
+
+.itemnumberserch{
+  margin: 0 30px 30px 0;
+}
+
+.itemnumberserch:nth-child(2n){
+  margin: 0 0 30px 0;
+}
+
+.butn{
+  padding: 0 5px 0 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color, color 0.5s ease ;
+  min-width: 106px;
+  
+}
+
+
+.butn:hover{
+  color: black;
+  background-color: #FFFFFF !important;
+}
+
+.number__search{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serch-content{
+  border-bottom: 1px solid #dc143c;
+  display: inline-block;
+}
+
+.serch{
+  font-weight: 900;
+  
+}
+
+.list{
+  width: 19%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.modal-body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-elem1,
+.modal-elem2{
+  width: 10%;
+  height: 38%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+.img-victory{
+  background-image: url(./1661880595_14-papik-pro-p-smailik-zelenaya-galochka-png-14.png);
+}
+
+.img-feild{
+  background-image: url(./1667389141_15-celes-club-p-krasnii-krestik-bez-fona-pinterest-16.png);
+}
+
+.transrormX{
+  animation: transX 1.5s  ease-in;
+}
+
+
+.tarnsRotate{
+  animation: rottate 4s infinite;
+}
+
+.tarnsScale{
+  animation: scrale 4s infinite;
+}
+
+.tarnsOpasity{
+  animation: opasity 1.5s infinite;
+}
+
+
+@keyframes rottate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(27deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-27deg);}
+  100%{transform: rotate(0deg);}
+}
+
+@keyframes scrale{
+  0% { transform: scale(1); }
+  25% { transform: scale(1.5); }
+  50% { transform: scale(1); }
+  75% { transform: scale(0.5);}
+  100%{transform: scale(1);}
+}
+
+@keyframes opasity{
+  0% {  opacity: 1 }
+  25% {  opacity: 0 }
+  50% {  opacity: 1}
+  75% {  opacity: 0}
+  100%{ opacity: 1}
+}
+
+@keyframes transX{
+  0% { transform: translateX(7500px); }
+  25% { transform: translateX(5500px); }
+  50% { transform: translateX(3000px); }
+  75% { transform:  translateX(1500px);}
+  100%{transform:translateX(0) ;}
+}
+
+/* поиск пары */
+.ulparehover{
+  display: flex;
+  width: 40%;
+}
+
+.pair__search-item__hover {
+  list-style-type: none;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+  width: 20%;
+  margin: 10px;
+  cursor: pointer;
+  height: 30px;
+  padding: 5px;
+  transition: border 0.5s ease;
+  position: relative;
+}
+
+.difficultylevel{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(180, 180, 180, 0.7);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.general-difficultylevel-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+}
+
+.number_of_cards{
+  border: 1px solid #22559c;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.pair__search-list {
+  padding: 30px;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 75%;
+
+}
+
+.pair__search-item {
+  list-style-type: none;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+  width: 20%;
+  margin: 10px;
+  background-color: black;
+  cursor: pointer;
+  height: 30px;
+  padding: 5px;
+  transition: border 0.5s ease;
+  position: relative;
+}
+
+.pair__search-item::after{
+    content: '';
+    border: 3px solid red;
+    width: 100%;
+    display: block;
+    height: 41px;
+    top: -3.9;
+    bottom: 0;
+    right: 0;
+    left: -3;
+    position: absolute;
+    display: block;
+    z-index: -1;
+}
+
+.pair__search-item:hover::after{
+  display: block;
+}
+
+
+.active-li {
+  background-color: inherit;
+}
+
+/* общие*/
+
+.general__param-button{
+  cursor: pointer;
+  width: 20%;
+  transition:  1s ease;
+}
+
+.general__param-button:hover{
+  transform: scale(1.2);
+}
+
+body{
+  position: relative;
+}
+
+.general-button_games{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30%;
+}
+
+.icons8{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 30%;
+}
+
+.hover_games{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: oklch(78% 0 0);;
+  height: 70%;
+}
+
+.games-of{
+  display: none;
+}
+
+ul {
+  list-style-type: none; /* Убирает буллиты */
+}
+
+p {
+  display: block;
+}
