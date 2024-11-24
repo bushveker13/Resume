@@ -1,0 +1,168 @@
+
+@import'_mixin.scss';
+@import'__variables.scss';
+.baner{
+    position: relative;
+    padding: 26px 0 125px 0 ;
+    background-image: url(../img/main.png);
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__logo{
+        margin-bottom: 65px;
+        display: flex;
+        width: 20.9%;
+        color: #595653;
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &-text{
+            margin: 0 0 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__title{
+        max-width: 542px;
+        width: 100%;
+        margin: 0 0 20px 0;
+        font-family: 'Merriweather',sans-serif;
+        text-transform: uppercase;
+        font-size: 60px;
+        line-height: 66px;
+        color: $colorgGeneralBlackText;
+
+        @media(max-width:$breakpoint_md){
+           font-size: 36px;
+           line-height: 39px;
+           
+        }
+
+        &-centerText{
+            display: block;
+            text-align: center;
+        }
+
+        &-rigtText{
+            display: block;
+            text-align: right;
+        }
+    }
+
+    &__text{
+        padding: 0 0 0 16px;
+        margin-bottom: 39px;
+        width: 44%;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        color: $colorgGeneralBlackText;
+
+        @media(max-width:$breakpoint_xl){
+            width: 71%;
+        }
+
+        @media(max-width:$breakpoint_md){
+            width: 100%;
+           
+        }
+    }
+
+    &__btn-left{
+        margin: 0 10px 0 0;
+        @include big-button;
+        border: none;
+        color: $colorgGeneralWhiteText;
+        background-color: #1F1F1F;
+        color: $colorgGeneralWhiteText;
+        transition: $transitionHover;
+        
+        &:hover{
+            color: #1F1F1F;
+            background-color: $colorBackFonButton;
+        }
+
+        & > *{
+            display: block;
+        }
+
+        @media(max-width:$breakpoint_md){
+            margin: 0 0 15px 0;
+           
+        }
+    }
+
+
+    &__btn-right{
+        @include big-button;
+        color: #1F1F1F;
+        border: 2px solid #1F1F1F;
+        transition: $transitionHover;
+
+        &:hover{
+            color: $colorgGeneralWhiteText;
+            background-color: #1F1F1F;
+
+        }
+
+        > *{
+            display: block;
+        }
+    }
+
+    @media(max-width:$breakpoint_xl){
+        background-image: url(../img/banner-1333.png);
+        background-position-x: center;
+    }
+
+    @media(max-width:$breakpoint_md){
+        background-image: url(../img/mainscreen.png);
+    }
+}
+
+.icon{
+    width: 22px;
+    height: 36px;
+}
+
+.img-sity{
+    position: absolute;
+    right: -53px;
+    top: 276px;
+    left: 156px;
+    max-height: 427px;
+    height: 100%;
+    width: 85%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: bottom;
+    object-position: bottom;
+    background-image: url(../img/path.png);
+
+    @media(max-width:1366px){
+        width: 100%;
+        left: 1px;
+    }
+}
+
+.dama-shess,
+.king-shess,
+.pawn-shess,
+.knignt-shess,
+.white-fon{
+    position: absolute;
+}
+
+.dama-shess,
+.king-shess{
+    z-index: -1;
+}
+
+.pawn-shess,
+.knignt-shess{
+    z-index: 1;
+}

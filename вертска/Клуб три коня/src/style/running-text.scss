@@ -1,0 +1,53 @@
+@import'_mixin.scss';
+@import'__variables.scss';
+.runnig-text{
+    height: 63px;
+    display: flex;
+    align-items: center;
+    background-color: $colorRedTexet;
+    font-family: 'Merriweather';
+    color: $colorgGeneralWhiteText;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.item {
+    animation: runnig-text 15s infinite linear;
+    font-weight: 400;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 22px;
+    width: 77%;
+    font-size: 22px;
+    top: 11px;
+    bottom: 12px;
+    right: 0;
+    left: 100%;
+    background-image: url(../img/Ellipse\ 9.svg);
+    background-repeat: no-repeat;
+    background-position: 78% 7px;
+}
+
+.anime-start {
+    animation-delay: 4s;
+    background-position-x: 87%;
+}
+
+.anime-start2{
+    animation-delay: 8.6s;
+    background-position-x: 67%;
+}
+
+@keyframes runnig-text {
+    from {
+        transform: translateX(130%);
+       
+    }
+    to {
+        transform: translateX(-2235px)
+        //transform: translateX(-300%);
+    }
+}
+
+
+

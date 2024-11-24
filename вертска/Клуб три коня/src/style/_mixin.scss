@@ -1,0 +1,47 @@
+@import'__variables.scss';
+@mixin big-button{
+    padding: 20px 8px;
+    min-width: 100px;
+    max-width: 263px;
+    width: 100%;
+    border-radius: 66px;
+    text-align: center;
+    font-weight: 500;
+
+    @media(max-width:$breakpoint_md){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        max-width: none;
+    }
+}
+
+@mixin text-advertisement{
+    color: $colorgGeneralBlackText;
+    font-family: 'Merriweather-Bold';
+    font-size: clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem);
+    line-height: 49px;
+    text-transform: uppercase;
+
+    & span{
+        color: $colorRedTexet;
+    }
+
+    @media(max-width:$breakpoint_sm){
+        line-height: 37px;
+      }
+}
+
+@mixin title{
+    font-family: 'Merriweather';
+    font-size: 54px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: $colorgGeneralBlackText;
+
+    @media(max-width:$breakpoint_md){
+      font-size: 36px;
+      line-height: 39px;
+    }
+}

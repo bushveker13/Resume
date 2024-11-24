@@ -1,0 +1,228 @@
+.stages {
+  padding: 201px 0 0 0;
+}
+.stages__title {
+  display: inline-block;
+  margin: 0 0 34px 0;
+  width: 60%;
+  font-family: "Merriweather";
+  font-size: 54px;
+  line-height: 65px;
+  text-transform: uppercase;
+  color: #313131;
+}
+@media (max-width: 768px) {
+  .stages__title {
+    font-size: 36px;
+    line-height: 39px;
+  }
+}
+.stages__href {
+  width: 345px;
+  color: #3057A2;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  text-transform: lowercase;
+}
+.stages__href::first-letter {
+  text-transform: uppercase;
+}
+.stages__navig-btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .stages__navig-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.stages__general-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  background-color: #313131;
+  color: #FFFFFF;
+  border: none;
+  position: relative;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+}
+.stages__general-btn:hover {
+  background-color: #FBCE51;
+}
+.stages__slade {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .stages__slade {
+    padding: 210px 0 0 0;
+    overflow: hidden;
+  }
+}
+.stages__slade::before {
+  content: "";
+  position: absolute;
+  width: 36%;
+  height: 207px;
+  top: 51%;
+  left: 70%;
+  background-image: url(../img/fly.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: cover;
+}
+@media (max-width: 1024px) {
+  .stages__slade::before {
+    top: -26%;
+    left: 40%;
+    width: 60%;
+    height: 231px;
+    background-size: contain;
+  }
+}
+@media (max-width: 768px) {
+  .stages__slade::before {
+    top: -3%;
+    left: 5%;
+    width: 100%;
+  }
+}
+.stages__list {
+  padding: 0 0 0 0;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-areas: "stage1 stage2 stage3" "stage4 stage5 stage3" "stage6 stage7 stage7";
+}
+@media (max-width: 1024px) {
+  .stages__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "stage1 stage2" "stage3 stage3" "stage4 stage5" "stage6 stage7" "stage6 stage7";
+  }
+}
+@media (max-width: 768px) {
+  .stages__list {
+    grid-template-columns: repeat(5, 100%);
+    gap: 0px;
+    grid-template-areas: "stage1 stage3 stage4 stage6 stage7" "stage2 stage3 stage5 stage6 stage7";
+  }
+}
+.stages .stageGrid-1 {
+  grid-area: stage1;
+}
+.stages .stageGrid-2 {
+  grid-area: stage2;
+}
+.stages .stageGrid-3 {
+  grid-area: stage3;
+}
+.stages .stageGrid-4 {
+  grid-area: stage4;
+}
+.stages .stageGrid-5 {
+  grid-area: stage5;
+}
+.stages .stageGrid-6 {
+  grid-area: stage6;
+}
+.stages .stageGrid-7 {
+  grid-area: stage7;
+}
+.stages .stageGrid-7 p {
+  width: 51%;
+}
+.stages__item {
+  min-height: 112px;
+  display: flex;
+  padding: 20px 20px 20px 20px;
+  margin: 0 20px 0 0;
+  background-image: url(../img/backStage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 635px) {
+  .stages__item {
+    padding: 40px;
+  }
+}
+.stages__item-numberStage {
+  background-color: #FFFFFF;
+  color: #313131;
+  font-weight: 600;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stages__item-text {
+  width: 85%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.stages__slade-blockKontant {
+  width: 10px;
+  height: 10px;
+  background-color: #D9D9D9;
+  border: 1px solid #D9D9D9;
+  border-radius: 90%;
+  cursor: pointer;
+}
+.stages__lists-butans {
+  display: flex;
+  padding: inherit;
+  width: 22%;
+  justify-content: space-evenly;
+  margin: 0 6px;
+}
+
+.stages__slade-blockKontant {
+  width: 15px;
+  height: 15px;
+  background-color: #D9D9D9;
+  border: 1px solid #D9D9D9;
+  border-radius: 90%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+.stages__slade-blockKontant:hover {
+  background-color: #F54932;
+}
+.stages__slade-blockKontant:focus {
+  border: 1px solid #F54932;
+}
+
+.color-active {
+  background-color: #313131;
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  color: #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+}
+
+.button-right::after {
+  content: "";
+  position: absolute;
+  color: #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  width: 8px;
+  height: 8px;
+  transform: rotate(221deg);
+}/*# sourceMappingURL=stages.css.map */
